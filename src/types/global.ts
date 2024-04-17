@@ -3,5 +3,4 @@ interface ExchangeRate {
     IRS: number;
     PKR: number;
     CAD:number;
-   
 }
