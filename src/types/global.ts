@@ -1,5 +1,7 @@
 interface ExchangeRate {
     BDT: number;
-    USD: number;
     IRS: number;
+    PKR: number;
+    CAD:number;
+   
 }
