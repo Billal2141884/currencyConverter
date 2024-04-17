@@ -33,9 +33,8 @@ export const getExchangeRate = async (req: Request, res: Response) => {
       // If the currency is not gbp or euro or usd we will throw an error
       res.status(404).send("Currency is not in list");
     }
-
-    // We will return the weather data as JSON
-      res.status(200).json(finalexchangerate);} 
+     res.status(200).json(finalexchangerate);
+    } 
     catch (error) {
     // If there is an error, we will log it and send a 500 status code
     res.status(500).send("Error in fetching exchange rate");
