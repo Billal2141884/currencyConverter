@@ -1,4 +1,4 @@
-import { generateGBPExchangeData, generateEURExchangeData, generateUSDExchangeData } from "../services/currecnyconvertion.ts";
+import { generateGBPExchangeData, generateEURExchangeData, generateUSDExchangeData } from "../services/currecnyconvertion.js";
 /**
  * Gets the exchange rate for a currency
  * @param req the request object

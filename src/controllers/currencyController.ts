@@ -3,7 +3,7 @@ import {
     generateGBPExchangeData,
     generateEURExchangeData,
     generateUSDExchangeData
-} from "../services/currecnyconvertion.ts";
+} from "../services/currecnyconvertion.js";
 
 /**
  * Gets the exchange rate for a currency
