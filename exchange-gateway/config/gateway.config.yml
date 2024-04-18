@@ -7,9 +7,15 @@ apiEndpoints:
   api:
     host: localhost
     paths: '/ip'
+  exchangeData:
+    host: "localhost"
+    paths: "/api/*"
+
 serviceEndpoints:
   httpbin:
     url: 'https://httpbin.org'
+  exchange:
+    url: 'https://zany-space-journey-g4x55xrg6qpgfwjgp-3000.app.github.dev/'
 policies:
   - basic-auth
   - cors
@@ -29,4 +35,16 @@ pipelines:
       - proxy:
           - action:
               serviceEndpoint: httpbin 
+              changeOrigin: true
+  
+  exchange:
+    apiEndpoints:
+      - exchangeData
+    policies:
+      - log:
+          action:
+            message: "${req.method} ${req.originalUrl}"
+      - proxy:
+          - action:
+              serviceEndpoint: exchange
               changeOrigin: true
